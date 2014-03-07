@@ -10,7 +10,7 @@ ext.mavenLocalDeployer = { Object repositoryDir, Map<String, String> config ->
         repositories {
             mavenDeployer {
                 repository(url: "file://${deployTo}")
-                pom.version = config.versionName
+                pom.version = config.version
                 pom.groupId = config.groupId
                 pom.artifactId = config.artifactId
             }

@@ -14,7 +14,7 @@ def repositoryDir = project.projectDir.getAbsolutePath() + '/repository';
 def mavenConfig = [
         groupId: 'net.ichigotake.maven_local_deployer',
         artifactId: 'test-library',
-        versionName: '0.1.2',
+        version: '0.1.2',
 ]
 
 mavenLocalDeployer(repositoryDir, mavenConfig)
