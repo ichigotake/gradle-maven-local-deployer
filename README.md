@@ -1,4 +1,4 @@
-maven-local-deployer [![Build Status](https://travis-ci.org/ichigotake/maven-local-deployer.png?branch=ci-test)](https://travis-ci.org/ichigotake/maven-local-deployer)
+maven-local-deployer [![Build Status](https://travis-ci.org/ichigotake/maven-local-deployer.png?branch=master)](https://travis-ci.org/ichigotake/maven-local-deployer)
 ==========
 
 Add `uploadArchives` task for upload maven repository to local file system.
@@ -18,6 +18,9 @@ def mavenConfig = [
 ]
 
 mavenLocalDeployer(repositoryDir, mavenConfig)
+
+// Run task
+// $ ./gradlew :library:uploadArchives
 
 ```
 
