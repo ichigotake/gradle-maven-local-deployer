@@ -1,0 +1,19 @@
+
+apply plugin: 'maven'
+
+/**
+ * Add `uploadArchives` task for upload maven repository to local file system
+ */
+ext.mavenLocalDeployer = { Object repositoryDir, Map<String, String> config ->
+    def deployTo = (repositoryDir in File) ? repositoryDir.getAbsolutePath() : repositoryDir.toString()
+    uploadArchives {
+        repositories {
+            mavenDeployer {
+                repository(url: "file://${deployTo}")
+                pom.version = config.versionName
+                pom.groupId = config.groupId
+                pom.artifactId = config.artifactId
+            }
+        }
+    }
+}

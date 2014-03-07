@@ -1,0 +1,32 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:0.9.0'
+    }
+}
+
+apply plugin: 'android-library'
+apply from: '../../build.gradle'
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "19.0.2"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 19
+        versionCode 1
+        versionName "1.0"
+    }
+}
+
+def repositoryDir = project.projectDir.getParentFile().getAbsolutePath() + '/repository';
+def mavenConfig = [
+        groupId: 'net.ichigotake.maven_local_deployer',
+        artifactId: 'test-library',
+        versionName: '0.1.2',
+]
+
+mavenLocalDeployer(repositoryDir, mavenConfig)
