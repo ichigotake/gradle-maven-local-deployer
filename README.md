@@ -1,4 +1,4 @@
-maven-local-deployer [![Build Status](https://travis-ci.org/ichigotake/maven-local-deployer.png?branch=master)](https://travis-ci.org/ichigotake/maven-local-deployer)
+maven-local-deployer [![Build Status](https://travis-ci.org/ichigotake/gradle-maven-local-deployer.png?branch=master)](https://travis-ci.org/ichigotake/gradle-maven-local-deployer)
 ==========
 
 Add `uploadArchives` task for upload maven repository to local file system.
@@ -8,7 +8,7 @@ Usage
 
 ``` groovy
 // I recommend to don't use direct url, and cache this (e.g. git submodule).
-apply from: 'https://raw.github.com/ichigotake/maven-local-deployer/master/build.gradle'
+apply from: 'https://raw.github.com/ichigotake/gradle-maven-local-deployer/master/build.gradle'
 
 def repositoryDir = project.projectDir.getAbsolutePath() + '/repository';
 def mavenConfig = [
